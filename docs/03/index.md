@@ -11,7 +11,7 @@ In this part we will learn how to use the Metatype Service and the Felix Webcons
 So when we have the Karaf container from Part 2 running and the config present we can already use the Felix Webconsole to edit the configuration.
 
 ```
-> features:install webconsole
+> feature:install webconsole
 ```
 
 Open your browser with http://localhost:8181/system/console/configMgr.
