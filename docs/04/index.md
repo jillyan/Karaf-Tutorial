@@ -8,7 +8,7 @@ To run the example you need to install the http feature of karaf. The default ht
 config admin pid "org.ops4j.pax.web". You also need to install the cxf feature. The base url of the cxf servlet is by default "/cxf".
 It can be configured in the config pid "org.apache.cxf.osgi".
 
-If you use Talend ESB instead of plain karaf then the default http port is 8044 and the default cxf servlet name is "/services".
+If you use Talend ESB instead of plain karaf then the default http port is 8040 and the default cxf servlet name is "/services".
 
 ## PersonService Example
 
@@ -30,7 +30,7 @@ The example consists of four projects
 First we build, install and run the example to give an overview of what it does. The following main chapter then explains in detail how it works.
 
 ### Installing Karaf and preparing for CXF
-We start with a fresh Karaf 4.0.4
+We start with a fresh Karaf 4.2.6
 
 - Unpack Karaf from http://karaf.apache.org/index/community/download.html
 - Run Karaf using bin/karaf
@@ -39,8 +39,8 @@ We start with a fresh Karaf 4.0.4
 ```
 mvn clean install
 Install service and ui in karaf
-feature:repo-add cxf 3.1.5
-feature:install http cxf-jaxws http-whiteboard
+feature:repo-add cxf 3.3.1
+feature:install http cxf-jaxws cxf-jaxrs http-whiteboard
 install -s mvn:net.lr.tutorial.karaf.cxf.personservice/personservice-model/1.0-SNAPSHOT
 install -s mvn:net.lr.tutorial.karaf.cxf.personservice/personservice-server/1.0-SNAPSHOT
 install -s mvn:net.lr.tutorial.karaf.cxf.personservice/personservice-proxy/1.0-SNAPSHOT
